@@ -1,0 +1,67 @@
+<h2 class="text-center">Detalles del cliente</h2>
+<div>
+    <div>
+        <label for="id"><b>ID : </b>{{cliente.idCliente}}</label>
+    </div>
+    <div>
+        <label for="id"><b>Nombre : </b>{{cliente.nombre}}</label>
+    </div>
+    <div>
+        <label for="id"><b>Paterno : </b>{{cliente.paterno}}</label>
+    </div>
+    <div>
+        <label for="id"><b>Materno : </b>{{cliente.materno}}</label>
+    </div>
+    <div>
+        <label for="id"><b>Tipo de documento : </b>{{mostrarTipoDocumento(cliente.tipoDocumento)}}</label>
+    </div>
+    <div>
+        <label for="id"><b>Documentp : </b>{{cliente.documento}}</label>
+    </div>
+    <div>
+        <label for="id"><b>Fecha de nacimiento : </b>{{cliente.fechaNacimiento}}</label>
+    </div>
+    <div>
+        <label for="id"><b>Genero : </b>{{mostrarGenero(cliente.genero)}}</label>
+    </div>
+</div>
+
+<br>
+<button type="button" class="btn btn-secondary" (click)="nuevaCuenta()">Nueva cuenta</button>
+
+<br>
+
+<h2 class="text-center">Lista cuentas</h2>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Tipo de cuenta</th>
+          <th scope="col">Número de cuenta</th>
+          <th scope="col">Moneda</th>
+          <th scope="col">Monto</th>
+          <th scope="col">Fecha de creación</th>
+          <th scope="col">Sucursal</th>
+          <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cuenta of cuentas">
+          <th scope="row">{{cuenta.idCuenta}}</th>
+          <td>{{mostrarTipoCuenta(cuenta.tipoCuenta)}}</td>
+          <td>{{cuenta.nroCuenta}}</td>
+          <td>{{mostrarMoneda(cuenta.moneda)}}</td>
+          <td>{{cuenta.monto}}</td>
+          <td>{{cuenta.fechaCreacion | date}}</td>
+          <td>{{mostrarSucursal(cuenta.sucursal)}}</td>
+          <td>
+              <button (click)="detallesCuenta(cuenta.idCuenta)" class="btn btn-success me-1">Ver detalles</button>
+              <button (click)="actualizarCuenta(cuenta.idCuenta)" class="btn btn-info me-1">Actualizar</button>
+              <button (click)="eliminarCuenta(cuenta.idCuenta)" class="btn btn-danger">Eliminar</button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

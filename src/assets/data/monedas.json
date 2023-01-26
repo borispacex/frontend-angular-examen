@@ -1,0 +1,12 @@
+[
+    {
+        "codigo": "BS",
+        "nombre": "Bolivianos",
+        "descripcion": "Bolivianos (BS)"
+    },
+    {
+        "codigo": "US",
+        "nombre": "Dolar",
+        "descripcion": "Dolar (US)"
+    }
+]

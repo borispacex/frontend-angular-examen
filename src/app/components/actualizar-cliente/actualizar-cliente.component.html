@@ -1,0 +1,57 @@
+<div class="col-md-6 offset-md-3">
+    <h2 class="text-center">Actualizar cliente</h2>
+    <form class="" (ngSubmit)="actualizarCliente()">
+        <div class="form-group">
+            <label for="label-nombre" class="form-label">Nombre</label>
+            <input class="form-control" [(ngModel)]="cliente.nombre" type="text" name="nombre" id="nombre" placeholder="Juan" >
+        </div>
+        <div class="form-group">
+            <label for="label-paterno" class="form-label">Paterno</label>
+            <input class="form-control" [(ngModel)]="cliente.paterno" type="text" name="paterno" id="paterno" placeholder="Perez">
+        </div>
+        <div class="form-group">
+            <label for="label-materno" class="form-label">Materno</label>
+            <input class="form-control" [(ngModel)]="cliente.materno" type="text" name="materno" id="materno" placeholder="Camacho">
+        </div>
+        <div class="form-group">
+            <label for="label-tipoDocumento" class="form-label">Tipo de documento</label>
+            <select class="form-select" [(ngModel)]="cliente.tipoDocumento" name="tipoDocumento" id="tipoDocumentp">
+                <option value="" selected disabled>-- Seleccionar tipo de documento --</option>
+                <option value="1">Cedula de Identidad</option>
+                <option value="2">Pasaporte</option>
+              </select>
+        </div>
+        <div class="form-group">
+            <label for="label-documento" class="form-label">Documento</label>
+            <input class="form-control" [(ngModel)]="cliente.documento" type="text" name="documento" id="documento" placeholder="1234567LP">
+        </div>
+
+        <div class="form-group">
+            <label for="label-fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+            <input class="form-control" [(ngModel)]="cliente.fechaNacimiento" type="text" name="fechaNacimiento" id="fechaNacimiento" placeholder="YYYY-MM-DD" bsDatepicker [bsConfig]=bsConfig>
+        </div>
+        
+        <div class="form-group">
+            <label for="label-genero" class="form-label">Genero</label>
+            <br>
+            <div class="form-check form-check-inline">
+                <input [(ngModel)]="cliente.genero" class="form-check-input" type="radio" name="genero" id="genero1" value="1">
+                <label class="form-check-label" for="genero1">Masculino</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input [(ngModel)]="cliente.genero" class="form-check-input" type="radio" name="genero" id="genero2" value="2">
+                <label class="form-check-label" for="genero2">Femenino</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="genero" id="genero3" value="3" disabled>
+                <label class="form-check-label" for="genero3">Otro (Desactivado)</label>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="mb-3">
+            <button class="btn btn-dark" type="submit">Actualizar</button>
+        </div>
+    </form>
+</div>

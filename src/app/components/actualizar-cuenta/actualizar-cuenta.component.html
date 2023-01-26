@@ -1,0 +1,49 @@
+<div class="col-md-6 offset-md-3">
+    <h2 class="text-center">Actualización cuenta</h2>
+    <form class="" novalidate [formGroup]="cuentaForm" (ngSubmit)="actualizarCuenta()">
+        <div class="form-group">
+            <label for="label-tipoCuenta" class="form-label">Tipo de cuenta</label>
+            <select class="form-select" [(ngModel)]="cuenta.tipoCuenta" formControlName="tipoCuenta" name="tipoCuenta" id="tipoDocumento">
+                <option value="" selected disabled>-- Seleccionar tipo de cuenta --</option>
+                <option [value]="tipoCuenta.codigo" *ngFor="let tipoCuenta of tiposCuenta">{{tipoCuenta.nombre}}</option>
+              </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="label-nroCuenta" class="form-label">Número de cuenta</label>
+            <input class="form-control" [(ngModel)]="cuenta.nroCuenta" formControlName="nroCuenta" type="text" name="nroCuenta" id="nroCuenta" placeholder="100000123456" >
+        </div>
+        <div class="form-group">
+            <label for="label-moneda" class="form-label">Moneda</label>
+            <select class="form-select" [(ngModel)]="cuenta.moneda" formControlName="moneda" name="moneda" id="moneda">
+                <option value="" selected disabled>-- Seleccionar moneda --</option>
+                <option [value]="moneda.codigo" *ngFor="let moneda of monedas">{{moneda.descripcion}}</option>
+              </select>
+        </div>
+
+
+        <div class="form-group">
+            <label for="label-monto" class="form-label">monto</label>
+            <input class="form-control" [(ngModel)]="cuenta.monto" formControlName="monto" type="text" name="monto" id="monto" placeholder="0">
+        </div>
+
+        <div class="form-group">
+            <label for="label-fechaCreacion" class="form-label">Fecha de creacion</label>
+            <input class="form-control" [(ngModel)]="cuenta.fechaCreacion" formControlName="fechaCreacion" type="text" name="fechaCreacion" id="fechaCreacion" placeholder="YYYY-MM-DD" bsDatepicker [bsConfig]=bsConfig>
+        </div>
+        
+        <div class="form-group">
+            <label for="label-sucursal" class="form-label">Sucursal</label>
+            <select class="form-select" [(ngModel)]="cuenta.sucursal" formControlName="sucursal" name="sucursal" id="sucursal">
+                <option value="" selected disabled>-- Seleccionar sucursal --</option>
+                <option [value]="sucursal.codigo" *ngFor="let sucursal of sucursales">{{sucursal.nombre}}</option>
+              </select>
+        </div>
+
+        <br>
+
+        <div class="mb-3">
+            <button class="btn btn-dark" type="submit" [disabled]="!cuentaForm.valid">Actualizar</button>
+        </div>
+    </form>
+</div>

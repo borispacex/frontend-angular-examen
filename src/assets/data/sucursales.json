@@ -1,0 +1,17 @@
+[
+    {
+        "codigo": "LP",
+        "nombre": "La Paz",
+        "descripcion": "La Paz"
+    },
+    {
+        "codigo": "CB",
+        "nombre": "Cochabamba",
+        "descripcion": "Cochabamba"
+    },
+    {
+        "codigo": "SC",
+        "nombre": "Santa Cruz",
+        "descripcion": "Santa Cruz"
+    }
+]

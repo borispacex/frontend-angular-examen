@@ -1,0 +1,12 @@
+[
+    {
+        "codigo": "1",
+        "nombre": "Caja de ahorros",
+        "descripcion": "Caja de ahorros"
+    },
+    {
+        "codigo": "2",
+        "nombre": "Cuenta corriente",
+        "descripcion": "Cuenta corriente"
+    }
+]

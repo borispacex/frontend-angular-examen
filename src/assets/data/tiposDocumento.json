@@ -1,0 +1,12 @@
+[
+    {
+        "codigo": "1",
+        "nombre": "Cedula de Identidad",
+        "descripcion": "Cedula de Identidad"
+    },
+    {
+        "codigo": "2",
+        "nombre": "Pasaporte",
+        "descripcion": "Pasaporte"
+    }
+]

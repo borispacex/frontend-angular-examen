@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/clientes']">
+      <img src="assets/images/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      <b> Empresa Financiera</b>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/clientes']" routerLinkActive="active" >Lista de clientes</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/registrar-cliente']">Registrar cliente</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link disabled">Sobre mi</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- <h1 class="text-center">{{title}}</h1> -->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
