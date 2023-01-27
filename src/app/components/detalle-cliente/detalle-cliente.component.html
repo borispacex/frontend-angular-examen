@@ -56,9 +56,9 @@
           <td>{{cuenta.fechaCreacion | date}}</td>
           <td>{{mostrarSucursal(cuenta.sucursal)}}</td>
           <td>
-              <button (click)="detallesCuenta(cuenta.idCuenta)" class="btn btn-success me-1">Ver detalles</button>
-              <button (click)="actualizarCuenta(cuenta.idCuenta)" class="btn btn-info me-1">Actualizar</button>
-              <button (click)="eliminarCuenta(cuenta.idCuenta)" class="btn btn-danger">Eliminar</button>
+              <button (click)="detallesCuenta(cuenta.idCuenta)" class="btn btn-success btn-sm me-1">Ver detalles</button>
+              <button (click)="actualizarCuenta(cuenta.idCuenta)" class="btn btn-info btn-sm me-1">Actualizar</button>
+              <button (click)="eliminarCuenta(cuenta.idCuenta)" class="btn btn-danger btn-sm">Eliminar</button>
           </td>
       </tr>
     </tbody>

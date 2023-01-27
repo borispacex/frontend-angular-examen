@@ -1,1 +1,1 @@
-export const endPoint: string  = 'http://localhost:8081/app/api/v1/';
+export const endPoint: string  = 'http://localhost:8081/api/v1/';
