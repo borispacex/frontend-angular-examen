@@ -45,7 +45,7 @@ export class ActualizarCuentaComponent implements OnInit {
   crearForm() {
     this.cuentaForm = new FormGroup({
       tipoCuenta: new FormControl('', [Validators.required]),
-      nroCuenta: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
+      nroCuenta: new FormControl('', [Validators.required, Validators.maxLength(10)]),
       moneda: new FormControl('', [Validators.required]),
       monto: new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(50)]),
       fechaCreacion: new FormControl('', [Validators.required]),
