@@ -51,7 +51,7 @@ export class RegistrarCuentaComponent implements OnInit {
       tipoCuenta: new FormControl('', [Validators.required]),
       nroCuenta: new FormControl('', [Validators.required, Validators.maxLength(10)]),
       moneda: new FormControl('', [Validators.required]),
-      monto: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]),
+      monto: new FormControl('', [Validators.required, Validators.maxLength(10)]),
       fechaCreacion: new FormControl('', [Validators.required]),
       sucursal: new FormControl('', [Validators.required])
     });
